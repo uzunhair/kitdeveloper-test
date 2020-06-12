@@ -8,6 +8,38 @@ block head
 block header
 
 block content
+		section.reviews
+			.container
+				.reviews__header
+					h3.reviews__title Наши отзывы
+					.reviews__nav
+						button.reviews__nav-btn.reviews__nav-prev
+							+icon("chevron-left", "reviews__nav-icon")
+						button.reviews__nav-btn.reviews__nav-next
+							+icon("chevron-right", "reviews__nav-icon")
+					.reviews__all
+						a.btn.btn__primary(href="#") Все отзывы
+							+icon("arrow-right", "btn__icon")
+
+				.reviews__body
+					.reviews__items
+
+						each text  in index.items
+							.reviews__item
+								.reviews__item-header
+									div
+										.reviews__item-title Антон
+										.reviews__item-date 20 апреля 2020
+									a.reviews__item-social(href="#")
+										+icon('instagram')
+										span.reviews__item-social-text В инстаграме
+								.reviews__item-text=text
+									//|
+
+
+
+
+
 
 block footer
-
+	.text_center Atid

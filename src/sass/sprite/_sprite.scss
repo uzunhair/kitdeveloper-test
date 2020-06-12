@@ -1,0 +1,27 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  position: relative;
+}
+
+[data-stroke="true"] {
+  stroke: currentColor;
+}
+[data-fill="true"] {
+  fill: currentColor;
+}
+
+.icon-arrow-right {
+  width:(25/25)*1em;
+}
+.icon-chevron-left {
+  width:(25/25)*1em;
+}
+.icon-chevron-right {
+  width:(25/25)*1em;
+}
+.icon-instagram {
+  width:(24/24)*1em;
+}
