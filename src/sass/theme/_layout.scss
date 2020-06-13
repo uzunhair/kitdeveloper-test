@@ -21,7 +21,7 @@
   text-decoration: none;
   user-select: none;
   border: 0 solid transparent;
-  display: flex;
+  display: inline-flex;
   text-align: center;
   align-items: center;
   border-radius: 20px;
@@ -34,6 +34,10 @@
   &:hover {
     text-decoration: none;
     transform: translateY(-4px);
+  }
+
+  &:focus {
+    outline: 0 dotted;
   }
 
   &__primary {
@@ -55,6 +59,7 @@
   margin-bottom: auto;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  overflow-x: hidden;
 
   &__header {
     display: flex;
@@ -91,6 +96,10 @@
         transform: translateY(-4px);
       }
 
+      &:focus {
+        outline: 0 dotted;
+      }
+
       & + .reviews__nav-btn {
         margin-left: .5rem;
       }
@@ -102,10 +111,30 @@
   }
 
   &__all {
+    display: none;
     margin-left: auto;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -$grid-gutter-width/2;
+    margin-right: -$grid-gutter-width/2;
+    transition: transform .4s ease-in-out;
   }
 
   &__item {
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+    display: flex;
+    flex: 1 0 auto;
+    transition: width .2s ease-in-out;
+  }
+
+  &__card {
     padding: 1.75rem;
     background-color: $white;
     border: 1px solid darken($white, 10%);
@@ -151,10 +180,19 @@
       margin-left: .5rem;
       border-bottom: 1px solid transparentize($danger, .8);
       transition: border-bottom-color .2s ease-in-out;
-    }
 
-    &-icon {
-      margin-right: .25rem;
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    @include media-breakpoint-up(md) {
+      display: none;
     }
   }
 }

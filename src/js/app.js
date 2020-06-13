@@ -18,6 +18,6 @@
 // require('../blocks/components/_components');
 // require('../blocks/modules/_modules');
 // require('../blocks/sections/_sections');
-// require('../blocks/pages/_pages');
+require('../blocks/pages/_pages');
 
 require('./setting');
