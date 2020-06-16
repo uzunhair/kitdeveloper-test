@@ -14,7 +14,7 @@
 }
 
 {{#shapes}}
-.icon-{{base}} {
+.icon__{{base}} {
   width:({{width.inner}}/{{height.inner}})*1em;
 }
 {{/shapes}}

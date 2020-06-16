@@ -65,7 +65,7 @@ gulp.task('styles:production', (cb) => {
     .pipe(autoprefixer({
       cascade: false,
     }))
-    .pipe(mincss())
+    //.pipe(mincss())
     .pipe(pxtorem())
     .pipe(duration('Assembly time styles'))
     .pipe(gulp.dest(path.styles.dist))

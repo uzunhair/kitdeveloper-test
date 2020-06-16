@@ -68,11 +68,16 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 600;
-    margin-right: 40px;
+    margin-right: auto;
     margin-bottom: 0;
     position: relative;
+
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+      margin-right: 40px;
+    }
 
     &-line {
       position: absolute;
